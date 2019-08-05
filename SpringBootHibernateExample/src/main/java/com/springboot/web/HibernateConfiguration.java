@@ -50,6 +50,9 @@ public class HibernateConfiguration {
  
 	@Value("${entitymanager.packagesToScan}")
 	private String PACKAGES_TO_SCAN;
+	
+//	@Value("${hibernate.cache.region.factory_class}")
+//	private String HIB_CACHE_REG_FACT_CLASS;
  
 	@Bean
 	public DataSource dataSource() {
@@ -70,7 +73,11 @@ public class HibernateConfiguration {
 		hibernateProperties.put("hibernate.dialect", DIALECT);
 		hibernateProperties.put("hibernate.show_sql", SHOW_SQL);
 		hibernateProperties.put("hibernate.hbm2ddl.auto", HBM2DDL_AUTO);
+	//	hibernateProperties.put("hibernate.cache.use_second_level_cache", true);
+	//	hibernateProperties.put("hibernate.cache.region.factory_class",HIB_CACHE_REG_FACT_CLASS);
 		sessionFactory.setHibernateProperties(hibernateProperties);
+		
+		
  
 		return sessionFactory;
 	}

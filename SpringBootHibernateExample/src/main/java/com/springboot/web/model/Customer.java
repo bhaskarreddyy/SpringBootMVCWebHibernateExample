@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.springframework.cache.annotation.Cacheable;
  
 /*
  * This is our model class and it corresponds to Customer table in database
@@ -23,6 +26,8 @@ import javax.persistence.Table;
 
 
 @Entity
+//@javax.persistence.Cacheable
+//@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Table(name="CUSTOMER")
 public class Customer{
  

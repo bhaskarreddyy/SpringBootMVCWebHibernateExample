@@ -43,6 +43,12 @@
 			<artifactId>threetenbp</artifactId>
 			<version>0.7.2</version>
 		</dependency>
+		<!-- enable ehCache for hibernate 
+		<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-ehcache</artifactId>
+     <version>4.1.12.Final</version> 
+</dependency>-->
 	</dependencies>
 	<build>
 		<finalName>SpringBootHibernateExample</finalName>	
